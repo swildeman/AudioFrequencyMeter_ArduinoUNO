@@ -12,3 +12,9 @@ The frequency range and resolution can be configured. The default configuration 
 - Pin 6 (AIN0): Audio signal, or other signal (centered at 2.5V)
 - Pin 7 (AIN1): Reference voltage (crossing detection threshold)
 - Pin 5 (Digital OUTPUT): Feedback line for creating hysteresis in threshold voltage
+
+# Example signal
+
+Playing five strings of my guitar (5th string down to the 1st string). After each string I damped the sound, as the meter can only detect a single frequency at a time.
+
+<img width="866" height="912" alt="guitar_notes" src="https://github.com/user-attachments/assets/8bcf33b1-a1a9-4481-a922-416e8bad3a0a" />
