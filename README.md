@@ -15,6 +15,6 @@ The frequency range and resolution can be configured. The default configuration 
 
 # Example signal
 
-Playing five strings of my guitar (5th string down to the 1st string). After each string I damped the sound, as the meter can only detect a single frequency at a time. Here I used a delay of 0.1 s between the printed samples.
+Playing five strings of my guitar (5th string down to the 1st string). After each string I damped the sound, as the meter can only detect a single frequency at a time. Here I used a delay of 0.1 s between the printed samples. As a microphone I used my phone (with a microphone amplifier app), connected to the circuit via its audio jack (and a small decoupling circuit, capacitor + resistors).
 
 <img width="866" height="912" alt="guitar_notes" src="https://github.com/user-attachments/assets/8bcf33b1-a1a9-4481-a922-416e8bad3a0a" />
