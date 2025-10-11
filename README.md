@@ -7,3 +7,4 @@ The frequency range and resolution can be configured. The default configuration 
 
 # External components and wiring
 
+<img width="1544" height="1090" alt="AudioFrequencyMeterCircuit" src="https://github.com/user-attachments/assets/12c6586d-8424-491e-bc3e-b76987850b00" />
