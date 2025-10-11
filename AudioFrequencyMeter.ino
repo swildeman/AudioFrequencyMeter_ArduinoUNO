@@ -6,7 +6,8 @@
 //    - Provide a 2.5V reference signal on Pin 7 of Arduino UNO (AIN1-) using a 10k/10k voltage divider; 
 //    - Connect Pin 5 to Pin 7 via a 100k resistor (the resulting threshold hysteresis will be roughly +/- 0.5 * (10k/100k) * 2.5V = 0.1V)
 //    - Connect Audio signal to Pin 6 (AIN0+); make sure the signal is centered on 2.5V (e.g. using decoupling circuit)
-//  The frequency range and resolution can be configured (see below). The default configuration detects frequencies between 30Hz - 20000Hz
+//  The frequency range and resolution can be configured (see below). 
+//  The default configuration detects frequencies between 30 Hz - 20 kHz within 1% accuracy.
 //
 // Created by Sander Wildeman 2025
 
@@ -29,7 +30,7 @@ uint8_t ledState = LOW;
 // Example: prescaler 8
 // Range: 31 Hz - 2 MHz
 // Resolution @ 100 Hz:   df = 0.005 Hz; df/f = 0.005%
-// Resolution @ 10000 Hz: df = 50 Hz;    df/f = 0.5%
+// Resolution @ 10000 Hz: df = 50 Hz;    df/f = 1%
 //
 const uint16_t timerPrescaler = 8;  // Set to 1, 8, 64, 256, or 1024;  Timer tick frequency = F_CPU / timerPrescaler
 
@@ -123,5 +124,5 @@ void loop() {
     Serial.println(freqHz, 2);
   }
 
-  // delay(100) // A delay can be added to slow down the reporting of frequencies to the Serial monitor, this won't affect the measurement
+  // delay(100); // A delay can be added to slow down the reporting of frequencies to the Serial monitor, this won't affect the measurement
 }
