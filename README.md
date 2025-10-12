@@ -18,3 +18,11 @@ The frequency range and resolution can be configured. The default configuration 
 Playing five strings of my guitar (5th string down to the 1st string). After each string I damped the sound, since the meter can only detect a single frequency at a time. Here I used a delay of 0.1 s between the printed samples. As a microphone I used my phone (with a microphone amplifier app), connected to the circuit via its audio jack (and a small decoupling circuit, capacitor + resistors).
 
 <img width="866" height="912" alt="guitar_notes" src="https://github.com/user-attachments/assets/8bcf33b1-a1a9-4481-a922-416e8bad3a0a" />
+
+Playing pure notes (1kHz,5kHz,10kHz,15kHz,20kHz,24kHz) with a [tone generator app](https://phyphox.org/) on my phone. The phone's headphone output was directly connected to the Arduino via a decoupling circuit.
+
+<img width="859" height="809" alt="Screenshot 2025-10-12 at 09 53 46" src="https://github.com/user-attachments/assets/d2365e1d-8007-43de-b840-20b1ee57c30b" />
+
+Using the tone generator app to play a 5ms "sonar" tjirp (frequency smoothly increasing from 0-7000Hz). To capture the fast signal in the Serial Plotter a high baud rate (1M) was used and the loop() was freely running (no explicit delay()).
+
+<img width="859" height="598" alt="Screenshot 2025-10-12 at 09 57 12" src="https://github.com/user-attachments/assets/616711b9-f203-4df9-8666-27410d4206e5" />
