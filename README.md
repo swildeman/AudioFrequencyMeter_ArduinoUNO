@@ -23,6 +23,6 @@ Playing pure notes (1kHz,5kHz,10kHz,15kHz,20kHz,24kHz) with a [tone generator ap
 
 <img width="859" height="809" alt="Screenshot 2025-10-12 at 09 53 46" src="https://github.com/user-attachments/assets/d2365e1d-8007-43de-b840-20b1ee57c30b" />
 
-Using the tone generator app to play a 5ms "sonar" tjirp (frequency smoothly increasing from 0-7000Hz in a timespan of 5ms). To capture the fast signal in the Serial Plotter a high baud rate (1M) was used and the loop() was freely running (no explicit delay()).
+Using the tone generator app to play a 5ms "sonar" tjirp (frequency smoothly increasing from 0-7000Hz in a timespan of 5ms). To capture the fast signal in the Serial Plotter a high baud rate (1M) was used and the loop() was freely running (no delay()).
 
 <img width="859" height="598" alt="Screenshot 2025-10-12 at 09 57 12" src="https://github.com/user-attachments/assets/616711b9-f203-4df9-8666-27410d4206e5" />
