@@ -20,7 +20,7 @@ Playing five strings of my guitar (5th string down to the 1st string). After eac
 
 <img width="866" height="912" alt="guitar_notes" src="https://github.com/user-attachments/assets/8bcf33b1-a1a9-4481-a922-416e8bad3a0a" />
 
-Playing pure notes (1kHz,5kHz,10kHz,15kHz,20kHz,24kHz) with a [tone generator app](https://phyphox.org/) on my phone. The phone's headphone output was directly connected to the Arduino via a decoupling circuit.
+Playing pure notes (1kHz, 5kHz, 10kHz, 15kHz, 20kHz, 24kHz) with a [tone generator app](https://phyphox.org/) on my phone. The phone's headphone output was directly connected to the Arduino via a decoupling circuit.
 
 <img width="859" height="809" alt="Screenshot 2025-10-12 at 09 53 46" src="https://github.com/user-attachments/assets/d2365e1d-8007-43de-b840-20b1ee57c30b" />
 
