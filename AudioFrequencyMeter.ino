@@ -48,12 +48,12 @@ ISR(ANALOG_COMP_vect) {
     } else {
       periodTicks = TCNT1;
     }
-    TCNT1 = 0;  // start counting from 0 to determine the period at the next crossing
+    TCNT1 = 2;  // reset counter, start counting from 2 to account for some systematic offset found in the calibration.
   }
 
   // Optional: toggle the builtin led at detected crossings (for testing purposes)
-  ledState = !ledState;
-  digitalWrite(LED_BUILTIN, ledState);
+  // ledState = !ledState;
+  // digitalWrite(LED_BUILTIN, ledState);
 
   // Toggle high/low threshold voltage, to create hysteresis in comparator
   threshState = !threshState;
@@ -120,9 +120,9 @@ void loop() {
   // when a new period reading is obtained: convert it to Hz and print the value
   if (curPeriodTicks > 0) { // 
     float freqHz = (float)F_CPU / ((float)curPeriodTicks * (float)timerPrescaler);
-    Serial.print("30 2000 "); // optional: print min/max frequency lines to fixate Serial Plotter y-axis
+    Serial.print("0 1500 "); // optional: print min/max frequency lines to fixate Serial Plotter y-axis
     Serial.println(freqHz, 2);
   }
 
-  // delay(100); // A delay can be added to slow down the reporting of frequencies to the Serial monitor, this won't affect the measurement
+  //delay(100); // A delay can be added to slow down the reporting of frequencies to the Serial monitor, this won't affect the measurement
 }
