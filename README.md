@@ -2,6 +2,7 @@
 
 Uses inbuilt Arduino (UNO) Analog Comparator (pin 6/7) to detect sound frequencies in real time (by detecting sound zero crossings).
 A small external circuit (three resistors) is needed to create hysteresis in the detection threshold, making it robust against noise. 
+
 Two version are available: In one a moving average is computed of the detected period, in the other no additional averaging or filtering is applied (when a very quick response time is needed).
 
 The frequency range and resolution can be configured. The default configuration detects frequencies between 30Hz - 20000Hz within 1% accuracy (if the tone is pure).
