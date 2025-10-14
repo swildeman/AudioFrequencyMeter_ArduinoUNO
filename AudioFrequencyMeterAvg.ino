@@ -153,5 +153,5 @@ void loop() {
     Serial.println(freqHz, 2);
   }
 
-  delay(100); // A delay can be added to slow down the reporting of frequencies to the Serial monitor, this won't affect the measurement
+  //delay(100); // A delay can be added to slow down the reporting of frequencies to the Serial monitor, this won't affect the measurement
 }
