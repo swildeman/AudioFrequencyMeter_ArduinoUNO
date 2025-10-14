@@ -45,7 +45,8 @@ volatile uint16_t periodTicks = 0; // Detected sound period (in units of counter
                                    // 0 = no sound period established yet
 
 // Circular buffer for computing a moving average
-const uint8_t N = 8; // window size N, modify as needed for application
+const uint8_t p = 4;  // window size N = 2^p, modify p as needed for application (note: a power of 2 is chosen so that the division operation can be optimized, allowing higher frequencies to be resolved)
+const uint8_t N = 1 << p; // compute N = 2^p using a bitshift
 uint16_t circbuf[N];
 uint8_t bufCount = 0; // number of valid samples in the buffer
 uint8_t bufHead = 0;  // index where next sample will be placed in buffer 
@@ -70,9 +71,9 @@ ISR(ANALOG_COMP_vect) {
         NperiodsTicks -= circbuf[bufHead];
         circbuf[bufHead] = curTCNT;
         NperiodsTicks += circbuf[bufHead];
-        periodTicks = NperiodsTicks / N; // compute average only once we have enough samples
+        periodTicks = NperiodsTicks / N; // compute average only once we have enough samples, if N is a power of 2 the compiler can optimize this step
       }
-      bufHead = (bufHead + 1) % N;
+      bufHead = (bufHead + 1) % N; // if N is a power of two the compiler can optimize this modulo operation
     }
   }
 
@@ -152,5 +153,5 @@ void loop() {
     Serial.println(freqHz, 2);
   }
 
-  //delay(100); // A delay can be added to slow down the reporting of frequencies to the Serial monitor, this won't affect the measurement
+  delay(100); // A delay can be added to slow down the reporting of frequencies to the Serial monitor, this won't affect the measurement
 }
