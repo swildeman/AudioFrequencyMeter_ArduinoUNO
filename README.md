@@ -1,11 +1,11 @@
 # Real-time Audio Frequency Meter (Arduino UNO)
 
-Uses inbuilt Arduino (UNO) Analog Comparator (pin 6/7) to detect sound frequencies in real time (by detecting sound zero crossings).
+Uses inbuilt Arduino (UNO) Analog Comparator (pin 6/7) to monitor sound frequencies in real time (by detecting sound zero crossings).
 A small external circuit (three resistors) is needed to create hysteresis in the detection threshold, making it robust against noise. 
 
-Two version are available: In one a moving average is computed of the detected period, in the other no additional averaging or filtering is applied (when a very quick response time is needed).
+A moving average of the detected sound periods can computed to smooth the signal (default window size = 16 periods), but this can also be turned off (when a very quick response time is needed).
 
-The frequency range and resolution can be configured. The default configuration detects frequencies between 30Hz - 20000Hz within 1% accuracy (if the tone is pure).
+The frequency range and resolution can be configured. The default configuration detects frequencies between 16Hz - 24000Hz within 0.1% accuracy (if the tone is pure).
 
 # External components and wiring
 
@@ -15,7 +15,7 @@ The frequency range and resolution can be configured. The default configuration 
 - Pin 7 (AIN1): Reference voltage (crossing detection threshold)
 - Pin 5 (Digital OUTPUT): Feedback line for creating hysteresis in threshold voltage
 
-# Example signals
+# Example signals (without moving average)
 
 Playing five strings of my guitar (5th string down to the 1st string). After each string I damped the sound, since the meter can only detect a single frequency at a time. Here I used a delay of 0.1 s between the printed samples. As a microphone I used my phone (with a "microphone amplifier" app) connected to the circuit via its headphone audio jack (and a small decoupling circuit, capacitor + resistors).
 
