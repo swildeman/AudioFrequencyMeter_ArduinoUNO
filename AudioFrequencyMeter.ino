@@ -36,6 +36,7 @@ uint32_t Noverflows = 0; // keep track of timer1 overflows for proper timekeepin
 const uint8_t maxOverflows = 16; // maxOverflows determines the minimum frequency that can be detected
                                  // Fmin = F_CPU  / (timerPrescaler * 2^16 * maxOverflows)
                                  // After 1/Fmin seconds, detection is reset/stalled until a new sound is detected.
+                                 // maxOverflows * N (window size circular buffer, see below) should < 2^16 to prevent overflow of uint32_t used for storing NperiodTicks;
 
 // State variables to keep track of the sound wave's threshold crossings
 bool lookForFirstCrossing = true;  // If true, no crossings have been detected (in a window of maxOverflows*timerPrescaler*2^16/F_CPU seconds)
