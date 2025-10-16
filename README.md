@@ -20,7 +20,7 @@ Here is an example of the signals at AIN0 (yellow) and AIN1 (pink) for a 247 Hz 
 ![AIN_0_1_Scope](https://github.com/user-attachments/assets/ba6d62b0-5a6b-4842-b12a-fcbe68f3468f)
 
 
-# Example signals (without moving average)
+# Examples frequency detection (without moving average)
 
 Playing five strings of my guitar (5th string down to the 1st string). After each string I damped the sound, since the meter can only detect a single frequency at a time. Here I used a delay of 0.1 s between the printed samples. As a microphone I used my phone (with a "microphone amplifier" app) connected to the circuit via its headphone audio jack (and a small decoupling circuit, capacitor + resistors).
 
