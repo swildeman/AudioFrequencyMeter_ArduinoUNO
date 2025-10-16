@@ -1,4 +1,4 @@
-# Real-time Audio Frequency Meter (up to 20 kHz)
+# Audio Frequency Meter Arduino UNO (up to 20 kHz)
 
 Monitor sound frequencies in real time (by detecting sound zero crossings) using inbuilt Arduino UNO Analog Comparator (pin 6/7).
 To make it robust against noise, a small external circuit (four resistors) is used to create hysteresis in the detection threshold programatically. 
