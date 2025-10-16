@@ -15,7 +15,8 @@ The frequency range and resolution can be configured. The default configuration 
 - Pin 7 (AIN1): Reference voltage (crossing detection threshold)
 - Pin 5 (Digital OUTPUT): Feedback line for creating hysteresis in threshold voltage. In the above configuration the hysteresis is about (10k/220k) * 0.5 * Vcc = 0.1 V
 
-Here is an example of the signals at AIN0 and AIN1 for a 247 Hz tone of about 2 Vpp.
+Here is an example of the signals at AIN0 (yellow) and AIN1 (pink) for a 247 Hz tone of about 2 Vpp. The pink signal shows the hysteresis in the threshold created by toggling output pin 5 HIGH/LOW when a downwards/upwards crossing  is detected.
+
 ![AIN_0_1_Scope](https://github.com/user-attachments/assets/ba6d62b0-5a6b-4842-b12a-fcbe68f3468f)
 
 
