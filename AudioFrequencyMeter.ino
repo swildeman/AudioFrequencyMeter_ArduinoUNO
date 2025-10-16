@@ -160,7 +160,7 @@ void loop() {
   // when a new period reading is obtained: convert it to Hz and print the value
   if (curPeriodTicks > 0) { // 
     float freqHz = (float)F_CPU / ((float)curPeriodTicks * (float)timerPrescaler);
-    Serial.print("0 2000 "); // optional: print min/max frequency lines to fixate Serial Plotter y-axis
+    Serial.print("50 1500 "); // optional: print min/max frequency lines to fixate Serial Plotter y-axis
     Serial.println(freqHz, 2);
   }
 
