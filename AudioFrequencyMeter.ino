@@ -18,10 +18,6 @@
 uint8_t threshPin = 5; 
 uint8_t threshState = HIGH;
 
-// The inbuilt led is toggled at detected sound wave crossings (for testing purposes)
-// (usually to fast to see, unless circuit it tested with generated low frequencies)
-uint8_t ledState = LOW;
-
 // Timer1 is used to measure the time between sound wave threshold crossings (i.e. the sound period)
 // This period is converted to the sound frequency reading (freq = 1/period)
 //
@@ -83,10 +79,6 @@ ISR(ANALOG_COMP_vect) {
     
   }
 
-  // Optional: toggle the builtin led at detected crossings (for testing purposes)
-  // ledState = !ledState;
-  // digitalWrite(LED_BUILTIN, ledState);
-
   // Toggle high/low threshold voltage, to create hysteresis in comparator
   threshState = !threshState;
   digitalWrite(threshPin, threshState);
@@ -126,9 +118,7 @@ void setup() {
   
   // Setup the output pins
   pinMode(threshPin, OUTPUT);
-  pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(threshPin, threshState);
-  digitalWrite(LED_BUILTIN, ledState);
 
   // Setup Timer1: https://wolles-elektronikkiste.de/en/interrupts-part-3-timer-interrupts
   TCCR1A = 0;                        // Normal timer use (we don't use it for PWM etc)
