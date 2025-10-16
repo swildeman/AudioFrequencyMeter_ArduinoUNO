@@ -5,7 +5,7 @@ To make it robust against noise, a small external circuit (four resistors) is us
 
 A moving average of the detected sound periods can computed to smooth the signal (default window size = 16 periods), but this can also be turned off (when a very quick response time is needed).
 
-The frequency range and resolution can be configured. The default configuration detects frequencies between 16Hz - 20kHz within 0.1% accuracy (if the tone is pure).
+The default configuration detects frequencies between 16Hz - 20kHz within 0.1% accuracy (if the tone is pure). The frequency range and resolution can be configured (esp. useful if lower frequencies need to be detected).
 
 # External components and wiring
 
