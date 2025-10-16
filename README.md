@@ -1,11 +1,11 @@
-# Real-time Audio Frequency Meter (up to 24 kHz)
+# Real-time Audio Frequency Meter (up to 20 kHz)
 
 Monitor sound frequencies in real time (by detecting sound zero crossings) using inbuilt Arduino UNO Analog Comparator (pin 6/7).
 To make it robust against noise, a small external circuit (four resistors) is used to create hysteresis in the detection threshold programatically. 
 
 A moving average of the detected sound periods can computed to smooth the signal (default window size = 16 periods), but this can also be turned off (when a very quick response time is needed).
 
-The default configuration detects frequencies between 16Hz - 24kHz within 0.1% accuracy (if the tone is pure). The frequency range and resolution can be configured (esp. useful if lower frequencies need to be detected, as for higher frequencies code execution times start to become a bottleneck).
+The default configuration detects frequencies between 16Hz - 20kHz within 0.1% accuracy (if the tone is pure). The frequency range and resolution can be configured (esp. useful if lower frequencies need to be detected, as for higher frequencies code execution times start to become a bottleneck).
 
 # External components and wiring
 
