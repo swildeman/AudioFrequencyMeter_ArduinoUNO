@@ -1,7 +1,7 @@
 # Real-time Audio Frequency Meter (Arduino UNO)
 
 Uses inbuilt Arduino (UNO) Analog Comparator (pin 6/7) to monitor sound frequencies in real time (by detecting sound zero crossings).
-A small external circuit (three resistors) is needed to create hysteresis in the detection threshold, making it robust against noise. 
+A small external circuit (four resistors) is needed to create hysteresis in the detection threshold, making it robust against noise. 
 
 A moving average of the detected sound periods can computed to smooth the signal (default window size = 16 periods), but this can also be turned off (when a very quick response time is needed).
 
