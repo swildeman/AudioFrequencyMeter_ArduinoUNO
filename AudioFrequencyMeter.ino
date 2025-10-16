@@ -6,7 +6,7 @@
 //    - Provide a 2.5V reference signal on Pin 7 of Arduino UNO (AIN1-) using a 10k/10k voltage divider; 
 //    - Connect Pin 5 to Pin 7 via a 100k resistor (the resulting threshold hysteresis will be roughly 0.5 * (10k/100k) * 2.5V = 0.1V)
 //    - Connect Audio signal to Pin 6 (AIN0+); make sure the signal is centered on 2.5V (e.g. using decoupling circuit)
-//  The frequency range and resolution can be configured (see below). The default configuration detects frequencies between 16 Hz - 24 kHz within 0.1% accuracy.
+//  The frequency range and resolution can be configured (see below). The default configuration detects frequencies between 16 Hz - 20 kHz within 0.1% accuracy.
 //  For smoothing the signal, a moving avarage of the detected sound period can be calculated by setting p > 0 for a window size of N = 2^p 
 //  (by default an avg over 16 periods is taken, i.e. p = 4)
 //  Disabling the moving average (p = 0) leads to a fast response to changes in freqency at the expense of a somewhat more noisy signal
