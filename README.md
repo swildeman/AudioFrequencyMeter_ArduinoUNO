@@ -13,7 +13,7 @@ The frequency range and resolution can be configured. The default configuration 
 
 - Pin 6 (AIN0): Audio signal, or other signal (centered at 2.5V)
 - Pin 7 (AIN1): Reference voltage (crossing detection threshold)
-- Pin 5 (Digital OUTPUT): Feedback line for creating hysteresis in threshold voltage
+- Pin 5 (Digital OUTPUT): Feedback line for creating hysteresis in threshold voltage. In the above configuration the hysteresis is about (10k/220k) * 0.5 * Vcc = 0.1 V
 
 # Example signals (without moving average)
 
