@@ -17,8 +17,7 @@ The frequency range and resolution can be configured. The default configuration 
 
 Here is an example of the signals at AIN0 (yellow) and AIN1 (pink) for a 247 Hz tone of about 2 Vpp. The pink signal shows the hysteresis in the threshold created by toggling output pin 5 HIGH/LOW when a downwards/upwards crossing  is detected.
 
-![AIN_0_1_Scope](https://github.com/user-attachments/assets/ba6d62b0-5a6b-4842-b12a-fcbe68f3468f)
-
+![AIN_0_1_Scope](https://github.com/user-attachments/assets/aa041b9f-6608-4fb6-bded-50c4f0215e60)
 
 # Examples frequency detection (without moving average)
 
