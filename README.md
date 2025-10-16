@@ -9,7 +9,7 @@ The frequency range and resolution can be configured. The default configuration 
 
 # External components and wiring
 
-<img width="1544" height="1090" alt="AudioFrequencyMeterCircuit" src="https://github.com/user-attachments/assets/12c6586d-8424-491e-bc3e-b76987850b00" />
+<img width="1549" height="1106" alt="AudioFrequencyMeterCircuit" src="https://github.com/user-attachments/assets/c7c0a5ce-b432-4df7-a922-b8723455042f" />
 
 - Pin 6 (AIN0): Audio signal, or other signal (centered at 2.5V)
 - Pin 7 (AIN1): Reference voltage (crossing detection threshold)
